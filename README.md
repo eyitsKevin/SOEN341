@@ -30,5 +30,8 @@ Social media has taken over the Internet in the recent years. This web applicati
 - Wei-Cheng Su
 
 ## Technologies/Resources
-- PHP
 - WordPress
+- HTML
+- CSS
+- JavaScript
+- PHP
