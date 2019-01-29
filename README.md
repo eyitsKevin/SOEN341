@@ -1,7 +1,7 @@
 # SOEN341 UC2
 
 ## Objective and Features
-Develop a Twitter-like web application with core features:
+Develop a Twitter-like web application with core features requested by users:
 - Posting tweets
 - "Like" a tweet
 - Follow a user
@@ -20,7 +20,7 @@ Social media has taken over the Internet in the recent years. This web applicati
 - Donya Meshgin
 - Farhan-Nabil Alamgir
 - Jack Leung (Jack-Leung)
-- Olivier Bertrand-Vachet
+- Olivier Bertrand-Vachet (Olihockey17)
 - Radu Stefan Plotoaga (RaduP13)
 - Samiha Rahman (samiha-rahman)
 - Thierry Le Bourdais
