@@ -1,4 +1,4 @@
-# SOEN341
+# SOEN341 UC2
 
 ## Objective
 Develop a Twitter-like web application with core features:
@@ -13,9 +13,7 @@ Develop a Twitter-like web application with core features:
 - Implementing notifications for all of the above features  
 
 ## Project
-Social media has taken over the Internet in the recent years. This web application allows people to connect with each other, and share their thoughts.
-
-
+Social media has taken over the Internet in the recent years. This web application allows people to connect with each other, and share their thoughts.It also alows people to interact and demonstrate different emotions through features like messages,tweets and likes.
 
 ## Team members
 - David Chen
