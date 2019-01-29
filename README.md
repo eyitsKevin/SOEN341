@@ -1,6 +1,6 @@
 # SOEN341 UC2
 
-## Objective
+## Objective and Features
 Develop a Twitter-like web application with core features:
 - Posting tweets
 - "Like" a tweet
@@ -12,17 +12,17 @@ Develop a Twitter-like web application with core features:
 - Tagging people in tweets
 - Implementing notifications for all of the above features  
 
-## Project
+## Project Description
 Social media has taken over the Internet in the recent years. This web application allows people to connect with each other, and share their thoughts.It also alows people to interact and demonstrate different emotions through features like messages,tweets and likes.
 
 ## Team members
-- David Chen
+- David Chen (davidchen2171)
 - Donya Meshgin
 - Farhan-Nabil Alamgir
-- Jack Leung
+- Jack Leung (Jack-Leung)
 - Olivier Bertrand-Vachet
-- Radu Stefan Plotoaga
-- Samiha Rahman
+- Radu Stefan Plotoaga (RaduP13)
+- Samiha Rahman (samiha-rahman)
 - Thierry Le Bourdais
 - Victor Tudoran
 - Wei-Cheng Su
