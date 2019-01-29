@@ -13,7 +13,7 @@ Develop a Twitter-like web application with core features requested by users:
 - Implementing notifications for all of the above features  
 
 ## Project Description
-Social media has taken over the Internet in the recent years. This web application allows people to connect with each other, and share their thoughts.It also alows people to interact and demonstrate different emotions through features like messages,tweets and likes.
+Social media has taken over the Internet in the recent years. This web application allows people to connect with each other, and share their thoughts. It also alows people to interact and demonstrate different emotions through features like messages,tweets and likes.
 
 ## Team members
 - David Chen (davidchen2171)
@@ -23,7 +23,7 @@ Social media has taken over the Internet in the recent years. This web applicati
 - Olivier Bertrand-Vachet (Olihockey17)
 - Radu Stefan Plotoaga (RaduP13)
 - Samiha Rahman (samiha-rahman)
-- Thierry Le Bourdais
+- Thierry Le Bourdais (ThierryRomain)
 - Victor Tudoran
 - Wei-Cheng Su
 
