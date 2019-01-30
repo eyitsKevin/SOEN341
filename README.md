@@ -16,16 +16,16 @@ Develop a Twitter-like web application with core features requested by users:
 Social media has taken over the Internet in the recent years, and as a result, occupies a prominent portion of every individual's life. This web application's purpose is to allow people to connect with each other, share their thoughts, and remain in the loop with current events, all in one unified platform. It also alows people to interact and demonstrate different emotions through features such as messages, tweets and likes.
 
 ## Team members
-- David Chen (davidchen2171)
-- Donya Meshgin (mesghin)
-- Farhan-Nabil Alamgir 
-- Jack Leung (Jack-Leung)
-- Olivier Bertrand-Vachet (Olihockey17)
-- Radu Stefan Plotoaga (RaduP13)
-- Samiha Rahman (samiha-rahman)
-- Thierry Le Bourdais (ThierryRomain)
-- Victor Tudoran (VictorTudoran)
-- Wei-Cheng Su (weigiu)
+- David Chen | [davidchen2171](https://github.com/davidchen2171)
+- Donya Meshgin | [meshgin](https://github.com/meshgin)
+- Farhan-Nabil Alamgir | [nabilalamgir](https://github.com/nabilalamgir)
+- Jack Leung | [Jack-Leung](https://github.com/Jack-Leung)
+- Olivier Bertrand-Vachet | [Olihockey17](https://github.com/Olihockey17)
+- Radu Stefan Plotoaga | [RaduP13](https://github.com/RaduP13)
+- Samiha Rahman | [samiha-rahman](https://github.com/samiha-rahman)
+- Thierry Le Bourdais | [ThierryRomain](https://github.com/ThierryRomain)
+- Victor Tudoran | [VictorTudoran](https://github.com/VictorTudoran)
+- Wei-Cheng Su | [WeiChengSu](https://github.com/WeiChengSu)
 
 ## Technologies/Resources (tentative)
 - WordPress
