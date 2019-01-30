@@ -13,7 +13,7 @@ Develop a Twitter-like web application with core features requested by users:
 - Implementing notifications for all of the above features  
 
 ## Project Description
-Social media has taken over the Internet in the recent years. This web application allows people to connect with each other, and share their thoughts. It also alows people to interact and demonstrate different emotions through features like messages,tweets and likes.
+Social media has taken over the Internet in the recent years, and as a result, occupies a prominent portion of every individual's life. This web application's purpose is to allow people to connect with each other, share their thoughts, and remain up to date with current events, all in one unified platform. It also alows people to interact and demonstrate different emotions through features such as messages, tweets and likes.
 
 ## Team members
 - David Chen | [davidchen2171](https://github.com/davidchen2171)
@@ -27,7 +27,7 @@ Social media has taken over the Internet in the recent years. This web applicati
 - Victor Tudoran | [VictorTudoran](https://github.com/VictorTudoran)
 - Wei-Cheng Su | [WeiChengSu](https://github.com/WeiChengSu)
 
-## Technologies/Resources
+## Technologies/Resources (tentative)
 - WordPress
 - HTML
 - CSS
