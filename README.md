@@ -13,21 +13,21 @@ Develop a Twitter-like web application with core features requested by users:
 - Implementing notifications for all of the above features  
 
 ## Project Description
-Social media has taken over the Internet in the recent years. This web application allows people to connect with each other, and share their thoughts. It also alows people to interact and demonstrate different emotions through features like messages,tweets and likes.
+Social media has taken over the Internet in the recent years, and as a result, occupies a prominent portion of every individual's life. This web application's purpose is to allow people to connect with each other, share their thoughts, and remain in the loop with current events, all in one unified platform. It also alows people to interact and demonstrate different emotions through features such as messages, tweets and likes.
 
 ## Team members
 - David Chen (davidchen2171)
-- Donya Meshgin
-- Farhan-Nabil Alamgir
+- Donya Meshgin (mesghin)
+- Farhan-Nabil Alamgir 
 - Jack Leung (Jack-Leung)
 - Olivier Bertrand-Vachet (Olihockey17)
 - Radu Stefan Plotoaga (RaduP13)
 - Samiha Rahman (samiha-rahman)
 - Thierry Le Bourdais (ThierryRomain)
-- Victor Tudoran
-- Wei-Cheng Su
+- Victor Tudoran (VictorTudoran)
+- Wei-Cheng Su (weigiu)
 
-## Technologies/Resources
+## Technologies/Resources (tentative)
 - WordPress
 - HTML
 - CSS
