@@ -25,7 +25,7 @@ Social media has taken over the Internet in the recent years, and as a result, o
 - Samiha Rahman | [samiha-rahman](https://github.com/samiha-rahman)
 - Thierry Le Bourdais | [ThierryRomain](https://github.com/ThierryRomain)
 - Victor Tudoran | [VictorTudoran](https://github.com/VictorTudoran)
-- Wei-Cheng Su | [WeiChengSu](https://github.com/WeiChengSu)
+- Wei-Cheng Su | [Weigiu](https://github.com/WeiChengSu)
 
 ## Technologies/Resources (tentative)
 - WordPress
