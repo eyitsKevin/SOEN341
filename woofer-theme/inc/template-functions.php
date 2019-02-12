@@ -57,3 +57,11 @@ function modify_user_form($form_type) {
     </script>
     <?php
 }
+/////////////////////////////////////////////////////////
+// Remove unneeded roles
+/////////////////////////////////////////////////////////
+
+remove_role( 'editor');
+remove_role( 'contributor');
+remove_role( 'subscriber');
+remove_role( 'author');
