@@ -65,3 +65,18 @@ remove_role( 'editor');
 remove_role( 'contributor');
 remove_role( 'subscriber');
 remove_role( 'author');
+
+
+// Add user role (woofers)
+add_role('woofer', 'Woofer', array(
+    'read' => true,
+    'edit_posts' => true,
+    'delete_posts' => true,
+		'delete_published_posts' => true,
+		'edit_published_posts' => true,
+		'publish_posts' => true,
+		'read' => true,
+		'upload_files' => true
+));
+
+
