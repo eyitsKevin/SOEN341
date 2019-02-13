@@ -1,4 +1,4 @@
-"<?php
+<?php
 function register_woof() {
   $labels = array(
     'name'               => _x( 'Woof', 'post type general name' ),
@@ -16,7 +16,7 @@ function register_woof() {
     'menu_name'          => 'Woofs'
 );
 
-$args = A1:D40
+$args = array(
     'labels'        => $labels,
     'description'   => 'Events',
     'public'        => true,
@@ -30,4 +30,4 @@ $args = A1:D40
 register_post_type( 'woof', $args );
 }
 add_action( 'init', 'register_woof' );
-"
+
