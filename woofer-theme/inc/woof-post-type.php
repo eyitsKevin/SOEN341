@@ -30,4 +30,3 @@ $args = array(
 register_post_type( 'woof', $args );
 }
 add_action( 'init', 'register_woof' );
-
