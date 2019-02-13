@@ -1,4 +1,4 @@
-"<?php
+
 function register_woof() {
   $labels = array(
     'name'               => _x( 'Woof', 'post type general name' ),
@@ -30,4 +30,7 @@ $args = A1:D40
 register_post_type( 'woof', $args );
 }
 add_action( 'init', 'register_woof' );
-"
+
+
+// Register woof post type
+require get_template_directory() . '/inc/woof-post-type.php';
