@@ -42,7 +42,7 @@ function remove_user_profiles_update_errors($errors, $update, $user) {
     $errors->remove('empty_email');
 }
 
-// Remove javascript and visual side of the error, for all user profile hooks
+// Remove javascript and visual side of the error, for all user profile hooks just to be sure
 add_action('user_new_form', 'modify_user_form', 10, 1);
 add_action('show_user_profile', 'modify_user_form', 10, 1);
 add_action('edit_user_profile', 'modify_user_form', 10, 1);
@@ -57,3 +57,35 @@ function modify_user_form($form_type) {
     </script>
     <?php
 }
+/////////////////////////////////////////////////////////
+// Remove unneeded roles
+/////////////////////////////////////////////////////////
+
+remove_role( 'editor');
+remove_role( 'contributor');
+remove_role( 'subscriber');
+remove_role( 'author');
+
+
+// Add user role (woofers)
+add_role('woofer', 'Woofer', array(
+    'read' => true,
+    'edit_posts' => true,
+    'delete_posts' => true,
+		'delete_published_posts' => true,
+		'edit_published_posts' => true,
+		'publish_posts' => true,
+		'read' => true,
+		'upload_files' => true
+));
+
+
+// Remove admin bar
+add_action('after_setup_theme', 'remove_admin_bar');
+
+function remove_admin_bar() {
+if (!current_user_can('administrator') && !is_admin()) {
+  show_admin_bar(false);
+}
+}
+
