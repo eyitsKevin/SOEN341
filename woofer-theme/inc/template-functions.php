@@ -101,14 +101,14 @@ function register_a_user(){
 
     $sanitized_user_login = sanitize_user($user_login);
     $sanitized_user_pass = sanitize_user($user_pass);
- 
+
     $user_id = wp_create_user($sanitized_user_login, $sanitized_user_pass, $user_email);
 
       update_user_option($user_id, 'default_password_nag', true, true);
       wp_new_user_notification($user_id, $sanitized_user_pass);
-     
-   
-	// In backend, there is a checkbox that needs to be ticked which sets 
+
+
+	// In backend, there is a checkbox that needs to be ticked which sets
 	// the role of new users to woof by default.
 }
 
@@ -143,3 +143,8 @@ if ( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] ) && $_POS
     $post_id = wp_insert_post($front_post);
 }
 
+/////////////////////////////////////////////////////////
+// Register woof post type
+/////////////////////////////////////////////////////////
+
+require get_template_directory() . '/inc/woof-post-type.php';
