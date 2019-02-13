@@ -122,3 +122,24 @@ function auto_login_new_user( $user_id ) {
         wp_redirect( 'https://orphic.ca/soen331/' );
     }
 add_action( 'user_register', 'auto_login_new_user' );
+
+/////////////////////////////////////////////////////////
+// Post from front end
+/////////////////////////////////////////////////////////
+
+
+if ( 'POST' == $_SERVER['REQUEST_METHOD'] && !empty( $_POST['action'] ) && $_POST['action'] == "woof") {
+
+    $title     = 'this is a woof';
+    $post_type = 'woof';
+    $front_post = array(
+    'post_title'    => $title,
+		'post_content' => @$_POST["text"],
+    'post_status'   => 'publish',
+    'post_type'     => $post_type
+    );
+
+		// insert post into DB
+    $post_id = wp_insert_post($front_post);
+}
+
