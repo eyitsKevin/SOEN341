@@ -119,7 +119,7 @@ function register_a_user(){
 function auto_login_new_user( $user_id ) {
         wp_set_current_user($user_id);
         wp_set_auth_cookie($user_id);
-        wp_redirect( 'localhost:8888/woofer/login.php' );
+        wp_redirect( 'localhost:8888/woofer/login.php');
     }
 add_action( 'user_register', 'auto_login_new_user' );
 
