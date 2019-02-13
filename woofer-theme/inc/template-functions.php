@@ -89,3 +89,36 @@ if (!current_user_can('administrator') && !is_admin()) {
 }
 }
 
+/////////////////////////////////////////////////////////
+// User registration from frontend
+/////////////////////////////////////////////////////////
+
+add_action('template_redirect', 'register_a_user');
+function register_a_user(){
+    $user_login = esc_attr($_POST['user']);
+    $user_pass = esc_attr($_POST['pass']);
+    require_once(ABSPATH.WPINC.'/registration.php');
+
+    $sanitized_user_login = sanitize_user($user_login);
+    $sanitized_user_pass = sanitize_user($user_pass);
+ 
+    $user_id = wp_create_user($sanitized_user_login, $sanitized_user_pass, $user_email);
+
+      update_user_option($user_id, 'default_password_nag', true, true);
+      wp_new_user_notification($user_id, $sanitized_user_pass);
+     
+   
+	// In backend, there is a checkbox that needs to be ticked which sets 
+	// the role of new users to woof by default.
+}
+
+/////////////////////////////////////////////////////////
+// Automatic log in of new users
+/////////////////////////////////////////////////////////
+
+function auto_login_new_user( $user_id ) {
+        wp_set_current_user($user_id);
+        wp_set_auth_cookie($user_id);
+        wp_redirect( 'https://orphic.ca/soen331/' );
+    }
+add_action( 'user_register', 'auto_login_new_user' );
