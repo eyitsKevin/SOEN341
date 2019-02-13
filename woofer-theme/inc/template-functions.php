@@ -111,3 +111,14 @@ function register_a_user(){
 	// In backend, there is a checkbox that needs to be ticked which sets 
 	// the role of new users to woof by default.
 }
+
+/////////////////////////////////////////////////////////
+// Automatic log in of new users
+/////////////////////////////////////////////////////////
+
+function auto_login_new_user( $user_id ) {
+        wp_set_current_user($user_id);
+        wp_set_auth_cookie($user_id);
+        wp_redirect( 'https://orphic.ca/soen331/' );
+    }
+add_action( 'user_register', 'auto_login_new_user' );
