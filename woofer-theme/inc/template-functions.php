@@ -204,3 +204,97 @@ function woof_custom_login( $args = array() ) {
     else
         return $form;
 }
+
+
+/////////////////////////////////////////////////////////
+// Redirect to our login form on failure
+/////////////////////////////////////////////////////////
+
+
+/*Login Error Handle*/
+add_action( 'wp_login_failed', 'woof_user_login_failed' ); // hook failed login
+
+function woof_user_login_failed( $user ) {
+    // check what page the login attempt is coming from
+    $referrer = $_SERVER['HTTP_REFERER'];
+
+    // check that were not on the default login page
+    if ( !empty($referrer) && !strstr($referrer,'wp-login') && !strstr($referrer,'wp-admin') && $user!=null ) {
+        // make sure we don't already have a failed login attempt
+        if ( !strstr($referrer, '?login=failed' )) {
+            // Redirect to the login page and append a querystring of login failed
+            wp_redirect( $referrer . '?login=failed');
+        } else {
+            wp_redirect( $referrer );
+        }
+        exit;
+    }
+}
+
+/*Login Empty Fields Error handling*/
+add_action( 'authenticate', 'pu_blank_login');
+
+function pu_blank_login( $user ){
+    // check what page the login attempt is coming from
+    $referrer = $_SERVER['HTTP_REFERER'];
+
+    $error = false;
+
+    if($_POST['log'] == '' || $_POST['pwd'] == '')
+    {
+        $error = true;
+    }
+
+    // check that were not on the default login page
+    if ( !empty($referrer) && !strstr($referrer,'wp-login') && !strstr($referrer,'wp-admin') && $error ) {
+
+        // make sure we don't already have a failed login attempt
+        if ( !strstr($referrer, '?login=failed') ) {
+            // Redirect to the login page and append a querystring of login failed
+            wp_redirect( $referrer . '?login=failed' );
+        } else {
+            wp_redirect( $referrer );
+        }
+    exit;
+
+    }
+}
+
+/////////////////////////////////////////////////////////
+// Follow/unfollow another user, adds/remove user ID
+// to following meta.
+// AJAX calls
+/////////////////////////////////////////////////////////
+
+add_action('wp_ajax_woof_ajax_follow', 'woof_ajax_follow');
+add_action('wp_ajax_nopriv_woof_ajax_follow', 'woof_ajax_follow');
+
+function woof_ajax_follow(){
+
+	$postuserid = $_GET["auth"];
+	$current_user = wp_get_current_user();
+	$currID = $current_user->ID;
+
+	$following = get_user_meta($currID,'following',true);
+	if(!is_array($following)) $following = array();
+	array_push($following,$postuserid);
+	update_user_meta($currID,'following',$following);
+
+}
+
+add_action('wp_ajax_woof_ajax_unfollow', 'woof_ajax_unfollow');
+add_action('wp_ajax_nopriv_woof_ajax_unfollow', 'woof_ajax_unfollow');
+
+function woof_ajax_unfollow(){
+
+	$postuserid = $_GET["auth"];
+	$current_user = wp_get_current_user();
+	$currID = $current_user->ID;
+
+	$following = get_user_meta($currID,'following',true);
+	$key = array_search($postuserid,$following);
+	unset($following[$key]);
+	delete_user_meta($currID,'following');
+	update_user_meta($currID,'following',$following);
+
+}
