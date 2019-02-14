@@ -1,4 +1,4 @@
-<h2 style=""margin:50px;margin-top:200px;"">
+<h2 style="margin:50px;margin-top:200px;">
   Displaying my woofs
 </h2>
 <?php
