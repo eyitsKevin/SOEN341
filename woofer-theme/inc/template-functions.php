@@ -159,7 +159,7 @@ require get_template_directory() . '/inc/woof-post-type.php';
 function woof_custom_login( $args = array() ) {
     $defaults = array(
         'echo' => true,
-        'redirect' => 'https://orphic.ca/soen331/',
+        'redirect' => 'localhost:8888/woofer/login.php',
         'form_id' => 'loginform',
         'label_username' => __( 'Username or Email Address' ),
         'label_password' => __( 'Password' ),

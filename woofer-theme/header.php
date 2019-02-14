@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Woofer
+ * @package woofer
  */
 
 ?>
@@ -18,6 +18,7 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body <?php body_class(); ?>>
@@ -26,24 +27,18 @@
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$woofer_description = get_bloginfo( 'description', 'display' );
-			if ( $woofer_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $woofer_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
 		</div><!-- .site-branding -->
 
+		<style>
+		#primary-menu li{
+			color:blue !important;
+			padding:20px;
+		}
+
+		#primary-menu a{
+			color:blue !important;
+		}
+		</style>
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'woofer' ); ?></button>
 			<?php
@@ -52,7 +47,31 @@
 				'menu_id'        => 'primary-menu',
 			) );
 			?>
+			<?php if(is_user_logged_in()):?>
+				<ul aria-expanded="false" id="primary-menu" class=" nav-menu" style="float:right;margin-right:50px;">
+					<li class="page_item">
+						<a href="<?php echo wp_logout_url(site_url()); ?>">Logout</a>
+					</li>
+				</ul>
+			<?php else: ?>
+				<ul aria-expanded="false" id="primary-menu" class=" nav-menu" style="float:right;margin-right:50px;">
+					<li class="page_item">
+						<a href="https://orphic.ca/soen341/login/">Login</a>
+					</li>
+					<li class="page_item">
+						<a href="https://orphic.ca/soen341/new-user/">Create account</a>
+					</li>
+				</ul>
+			<?php endif; ?>
 		</nav><!-- #site-navigation -->
+		<?php if(is_user_logged_in()):?>
+			<div style="margin-left:50px;font-weight:800;">
+				<?php
+				$current_user = wp_get_current_user();
+				?>
+				Currently logged in as : <?php echo $current_user->display_name; ?>
+			</div>
+		<?php endif; ?>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
