@@ -22,6 +22,9 @@ get_header();
       </div>
       <input type="hidden" name="action" value="woof" />
    </from>
+
+<?php echo get_template_part( 'show-woofs-on-profile.php' ); ?>
+
 <?php else: ?>
   <h1 style="margin:50px;">
     You need to login !!
