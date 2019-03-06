@@ -1,5 +1,29 @@
+# Travis CI (MIT License) configuration file
+# @link https://travis-ci.org/
+
+# Use new container based environment
+sudo: false
+
+# Declare project language.
 language: php
 
-php:
-  - 5.6
-  - 7.0
+# Declare versions of PHP to use. Use one decimal max.
+matrix:
+    fast_finish: true
+
+    include:
+        - php: '5.4'
+        - php: '5.5'
+        - php: '5.6'
+        - php: '7.0'
+        - php: '7.1'
+        - php: '7.2'
+        # php nightly
+        - php: 'nightly'
+
+    allow_failures:
+        - php: nightly
+
+script:
+  # Search for PHP syntax errors.
+  - find -L . -path ./vendor -prune -o -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l
