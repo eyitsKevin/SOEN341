@@ -90,4 +90,5 @@ script:
     # --standard: Use WordPress as the standard.
     # --extensions: Only sniff PHP files.
     - ls -a 
+    - echo "$PWD/codesniffer.ruleset.xml"
     - $WP_DEVELOP_DIR/php-codesniffer/bin/phpcs -p -s -v -n . --standard=../codesniffer.ruleset.xml --extensions=php
