@@ -89,5 +89,5 @@ script:
     # -n flag: Do not print warnings (shortcut for --warning-severity=0)
     # --standard: Use WordPress as the standard.
     # --extensions: Only sniff PHP files.
-    - cd $WP_DEVELOP_DIR/php-codesniffer
-    - bin/phpcs -p -s -v -n . --standard=woofer-theme/codesniffer.ruleset.xml --extensions=php
+    - ls -a 
+    - $WP_DEVELOP_DIR/php-codesniffer/bin/phpcs -p -s -v -n . --standard=woofer-theme/codesniffer.ruleset.xml --extensions=php
