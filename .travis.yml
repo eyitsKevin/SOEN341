@@ -91,4 +91,6 @@ script:
     # --extensions: Only sniff PHP files.
     - cd $WP_DEVELOP_DIR/php-codesniffer
     - ls -a
+    - cd ../../
+    - ls -a
     - bin/phpcs -p -s -v -n . --standard=./codesniffer.ruleset.xml --extensions=php
