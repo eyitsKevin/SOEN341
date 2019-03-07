@@ -43,3 +43,29 @@ $(document).ready(function(){
 
   });
 });
+
+
+  /////////////////////////////////////////////////////////
+  // Helper fcts to make sure ALL the btns are changed
+  // when follow/unfollow
+  /////////////////////////////////////////////////////////
+
+  function tailAll(authID){
+    $('.sub-btn').each(function(){
+      if($(this).data('authid') == authID){
+        $(this).hide();
+        $(this).next().show();
+      }
+    });
+  }
+
+  function unleashAll(authID){
+    $('.unsub-btn').each(function(){
+      if($(this).data('authid') == authID){
+        $(this).hide();
+        $(this).prev().show();
+      }
+    });
+  }
+
+});
