@@ -10,7 +10,9 @@ Develop a Twitter-like web application with core features requested by users:
 - Direct messages between users 
 - Including hashtags in tweets and following hashtags
 - Tagging people in tweets
-- Implementing notifications for all of the above features  
+- Implementing notifications for all of the above features
+- Post Videos/Pictures
+- Profile Picture
 
 ## Project Description
 Social media has taken over the Internet in the recent years, and as a result, occupies a prominent portion of every individual's life. This web application's purpose is to allow people to connect with each other, share their thoughts, and remain up to date with current events, all in one unified platform. It also allows people to interact and demonstrate different emotions through features such as messages, tweets and likes.
@@ -33,3 +35,4 @@ Social media has taken over the Internet in the recent years, and as a result, o
 - CSS
 - JavaScript
 - PHP
+- Travis
