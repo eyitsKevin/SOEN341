@@ -298,3 +298,44 @@ function woof_ajax_unfollow(){
 	update_user_meta($currID,'following',$following);
 
 }
+
+/////////////////////////////////////////////////////////
+// Like a post, add to post meta
+// AJAX calls
+/////////////////////////////////////////////////////////
+
+
+add_action('wp_ajax_woof_ajax_like', 'woof_ajax_like');
+add_action('wp_ajax_nopriv_woof_ajax_like', 'woof_ajax_like');
+
+function woof_ajax_like(){
+
+	$postid = $_GET[""postid""];
+	$current_user = wp_get_current_user();
+	$currID = $current_user->ID;
+
+	$liked = get_user_meta($currID,'likedposts',true);
+	if(!is_array($liked)) $liked = array();
+	array_push($liked,$postid);
+	update_user_meta($currID,'likedposts',$liked);
+
+}
+
+add_action('wp_ajax_woof_ajax_unlike', 'woof_ajax_unlike');
+add_action('wp_ajax_nopriv_woof_ajax_unlike', 'woof_ajax_unlike');
+
+function woof_ajax_unlike(){
+
+	$postid = $_GET[""postid""];
+	$current_user = wp_get_current_user();
+	$currID = $current_user->ID;
+
+	$liked = get_user_meta($currID,'likedposts',true);
+	$key = array_search($postid,$liked);
+	unset($liked[$key]);
+	delete_user_meta($currID,'likedposts');
+	update_user_meta($currID,'likedposts',$liked);
+
+}
+
+
